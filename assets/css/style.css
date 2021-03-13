@@ -1,0 +1,60 @@
+/*
+  The page supports both dark and light color schemes,
+  and the page author prefers dark.
+*/
+/* Light / Dark Mode */
+:root {color-scheme: light dark;}
+:any-link {color: var(--link-color);}
+body, nav {--duration: 0.5s; --timing: ease; background-color: var(--background-color); color: var(--color); transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);}
+h1 {color: var(--main-headline-color);}
+/*button,
+input {outline: solid 1px var(--color);}*/
+button {color: var(--accent-color); background: var(--accent-background-color);}
+
+
+dark-mode-toggle {
+  --dark-mode-toggle-light-icon: url(assets/img/arctic-fox.svg);
+  --dark-mode-toggle-dark-icon: url(assets/img/arctic-fox.svg);
+  height: 50px;    
+/*  
+  position: absolute;
+  top: 5em;
+  right: calc(50% - 4.5em);*/  
+}
+/*img[src*=".svg"]:hover {
+  filter: var(--icon-filter_hover);
+}*/
+/** {border: 1px solid red}*/
+.alert{width: fit-content; position: absolute; margin: 0 auto; top: 5.6em; left: 0; right: 0; bottom: 0; height: fit-content}
+.triangle {
+	--duration: 0.5s; --timing: ease;
+	transition: color var(--duration) var(--timing), background-color var(--duration) var(--timing);
+	position: absolute;
+	top: -1em;
+	right: 50%;
+	text-align: left;
+}
+.triangle:before,
+.triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  15px;
+	height: 15px;
+	border-top-right-radius: 30%;
+}
+
+.triangle {
+	transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+.card{background-color: var(--background-color);}
