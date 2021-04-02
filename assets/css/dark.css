@@ -19,3 +19,10 @@
 .navbar{background-color: rgb(33, 33, 33)!important}
 .navbar-light .navbar-nav .nav-link{color: rgba(251, 251, 251, .5); font-weight: normal!important;}
 .navbar-light .navbar-nav .nav-link:hover{color: rgba(251, 251, 251, .7);}
+.form-outline .form-control~.form-label{color: var(--white)}
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{-webkit-box-shadow: 0 0 0 30px rgba(0,0,0,.7) inset !important;}
+.form-outline .form-control:focus{-webkit-box-shadow: 0 0 0 30px rgba(0,0,0,.8) inset !important;}
